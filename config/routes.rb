@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users, :controllers => { registrations: 'registrations' }
   root 'wines#index'
 
 get 'wines/:id/delete' => 'wines#delete', :as => :wines_delete
