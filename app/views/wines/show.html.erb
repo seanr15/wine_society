@@ -1,0 +1,31 @@
+
+<%= render 'layouts/header' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>
+  <%= image_tag("#{@wine.url}", :alt => "Holder") %>
+
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @wine.name %>
+</p>
+<p>
+  <strong>Winery:</strong>
+  <%= @wine.winery %>
+</p>
+<p>
+  <strong>Varietal:</strong>
+  <%= @wine.varietal %>
+</p>
+  <%= link_to "Delete", @wine, method: :delete %> |
+  <%= link_to 'Edit', edit_wine_path(@wine) %> |
+  <%= link_to 'Back', root_path %>

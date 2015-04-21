@@ -1,0 +1,38 @@
+
+<%= render 'layouts/header' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form>
+  <div class="form-group">
+    <label for="enterWinery">Enter Winery</label>
+    <input type="winery" class="form-control" id="winery" placeholder="Winery">
+  </div>
+  <div class="form-group">
+    <label for="enterVarietal">Enter Varietal (If applicable)</label>
+    <input type="varietal" class="form-control" id="varietal" placeholder="Varietal">
+  </div>
+	<span>
+  <button class="btn btn-default" id="submitBtn">Submit</button>
+	</span>
+
+	<span>
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Enter Wine Manually</button>
+
+	</span>
+</form>
+
+
+<%= link_to 'Back', root_path %>
+
+
+  <table class= "table table-striped table-hover" id="wine_table">
+
+</table>

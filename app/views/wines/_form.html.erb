@@ -1,0 +1,22 @@
+<%= form_for(@wine) do |f| %>
+
+  <div class="name">
+   <%= f.label :name %><br>
+   <%= f.text_field :name %>
+
+  </div>
+  
+  <div class="varietal">
+     <%= f.label :varietal %><br>
+     <%= f.text_field :varietal %>
+  </div>
+
+  <div class="winery">
+     <%= f.label :winery %><br>
+     <%= f.text_field :winery %>
+  </div>
+
+  <div class="actions">
+  <%= f.submit %>
+  </div>
+<% end %>

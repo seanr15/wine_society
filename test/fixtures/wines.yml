@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  varietal: MyString
+  winery: MyString
+  url: MyString
+
+two:
+  name: MyString
+  varietal: MyString
+  winery: MyString
+  url: MyString
