@@ -37,12 +37,16 @@
 	</tr>
 
 	<% @wines.each do |wine| %>
+
+	<%if wine.user_id == current_user.id %>
+
 	<tr>
 			<th><center><%= image_tag("#{wine.url}", :alt => "Holder") %></center></th>
 			<th><center><%=link_to "#{wine.name}", wine%></center></th>
 			<th><center><%=wine.varietal%></center></th>
 			<th><center><%=wine.winery%></center></th>
 	</tr>
+	<%end%>
 	<% end %>
 
 

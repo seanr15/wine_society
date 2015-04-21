@@ -16,6 +16,7 @@ end
 
 def create
   @wine = Wine.new(wine_params)
+  @wine.user_id = current_user.id
   if @wine.save
     redirect_to(:action => 'index')
   else
@@ -50,6 +51,6 @@ end
 
 private
 def wine_params
-params.require(:wine).permit(:name, :varietal, :winery, :url)
+params.require(:wine).permit(:name, :varietal, :winery, :url, :user_id)
 end
 end
