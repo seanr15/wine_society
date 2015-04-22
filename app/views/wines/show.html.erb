@@ -26,6 +26,8 @@
   <strong>Varietal:</strong>
   <%= @wine.varietal %>
 </p>
+
+Rating  : <%= rating_for @wine, "rating" %>
   <%= link_to "Delete", @wine, method: :delete %> |
   <%= link_to 'Edit', edit_wine_path(@wine) %> |
   <%= link_to 'Back', root_path %>

@@ -7,6 +7,9 @@ end
 
 def show
   @wine = Wine.find(params[:id])
+  if @wine.user_id != current_user.id
+    redirect_to(:action => 'index')
+  end
 end
 
 def new

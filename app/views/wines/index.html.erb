@@ -34,6 +34,9 @@
       <th><center>Name</center></th>
       <th><center>Varietal</center></th>
       <th><center>Winery</center></th>
+			<th><center>Rating</center></th>
+
+
 	</tr>
 
 	<% @wines.each do |wine| %>
@@ -45,6 +48,9 @@
 			<th><center><%=link_to "#{wine.name}", wine%></center></th>
 			<th><center><%=wine.varietal%></center></th>
 			<th><center><%=wine.winery%></center></th>
+			<th><center><%= rating_for wine, "rating" %></center></th>
+
+
 	</tr>
 	<%end%>
 	<% end %>
