@@ -2,7 +2,7 @@ class WinesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-  @wines = Wine.all
+  @wines = Wine.where(user_id: current_user.id)
 end
 
 def show
@@ -29,10 +29,16 @@ end
 
 def edit
   @wine = Wine.find(params[:id])
+  if @wine.user_id != current_user.id
+    redirect_to(:action => 'index')
+  end
 end
 
 def delete
   @wine = Wine.find(params[:id])
+  if @wine.user_id != current_user.id
+    redirect_to(:action => 'index')
+  end
 end
 
 
